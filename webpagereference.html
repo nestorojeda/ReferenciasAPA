@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Referencia/Página Web</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/generate.js"></script>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Libro</a></li>
+        <li><a href="webpagereference.html">Página Web</a></li>
+    </ul>
+</nav>
+
+<form name ="apaFormBook">
+    <div class="form-group">
+        <label>Autor(es)</label>
+        <input type="text" class="form-control" name="authorInput" aria-describedby="authorHelp" placeholder="Introduzca el nombre del autor / autores">
+    </div>
+    <div class="form-group">
+        <label>Titulo</label>
+        <input type="text" class="form-control" name="titleInput" placeholder="Inserte el título">
+    </div>
+    <div class="form-group">
+        <label>Fecha</label>
+        <input type="date" class="form-control" name="dateInput" placeholder="Inserte la fecha">
+    </div>
+    <div class="form-group">
+        <label>URL</label>
+        <input type="url" class="form-control" name="urlInput" placeholder="Inserte la url de la página">
+    </div>
+    <button type="button" onclick="generateWebReference()" class="btn btn-primary">Generar referencia</button>
+</form>
+
+<p id="outputReference"></p>
+</body>
+</html>

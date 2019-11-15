@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Referencias</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Libro</a></li>
+            <li><a href="webpagereference.html">Página Web</a></li>
+        </ul>
+    </nav>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/generate.js"></script>
+    <form name ="apaFormBook">
+        <div class="form-group">
+            <label>Autor(es)</label>
+            <input type="text" class="form-control" name="authorInput" aria-describedby="authorHelp" placeholder="Introduzca el nombre del autor / autores">
+        </div>
+        <div class="form-group">
+            <label>Titulo</label>
+            <input type="text" class="form-control" name="titleInput" placeholder="Inserte el título">
+        </div>
+        <div class="form-group">
+            <label>Ciudad</label>
+            <input type="text" class="form-control" name="cityInput" placeholder="Inserte la ciudad">
+        </div>
+        <div class="form-group">
+            <label>Año</label>
+            <input type="number" class="form-control" name="yearInput" placeholder="Inserte el año">
+        </div>
+        <div class="form-group">
+            <label>Página</label>
+            <input type="number" class="form-control" name="pageInput" placeholder="Inserte la página">
+        </div>
+        <button type="button" onclick="generateBookReference()" class="btn btn-primary">Generar referencia</button>
+    </form>
+
+    <p id="outputReference"></p>
+</body>
+</html>
