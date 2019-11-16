@@ -1,7 +1,4 @@
 function generateBookReference() {
-
-    document.getElementsByName("outputReference").innerHTML = "hola";
-
     var author = document.forms["apaFormBook"]["authorInput"].value;
     var title = document.forms["apaFormBook"]["titleInput"].value;
     var city = document.forms["apaFormBook"]["cityInput"].value;
@@ -18,9 +15,6 @@ function generateBookReference() {
 
 
 function generateWebReference() {
-
-    document.getElementsByName("outputReference").innerHTML = "hola";
-
     var author = document.forms["apaFormWeb"]["authorInput"].value;
     var title = document.forms["apaFormWeb"]["titleInput"].value;
     var date = new Date(document.forms["apaFormWeb"]["dateInput"].value);
@@ -30,7 +24,6 @@ function generateWebReference() {
     var lastName = author.split(' ').slice(-1).join(' ');
 
     document.getElementById("outputReference").innerHTML = lastName + ", " + firstName.charAt(0) + ". " + "(" + dateConversor(date) + ") " +title + " [¿Que es?] Recuperado de " + url;
-
 }
 
 function dateConversor(date){
@@ -52,10 +45,6 @@ function dateConversor(date){
     if(month === 11) month = "diciembre";
 
     return day + " de " +  month + " de " + year;
-
-
-
-
 
 }
 
