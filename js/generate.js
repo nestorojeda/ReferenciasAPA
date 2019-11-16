@@ -1,12 +1,28 @@
-function generateBookReference() {
-    var author = document.forms["apaFormBook"]["authorInput"].value;
-    var title = document.forms["apaFormBook"]["titleInput"].value;
-    var city = document.forms["apaFormBook"]["cityInput"].value;
-    var year = document.forms["apaFormBook"]["yearInput"].value;
-    var page = document.forms["apaFormBook"]["pageInput"].value;
+let today = new Date();
+let dd = today.getDate();
+let mm = today.getMonth() + 1; //January is 0!
+const yyyy = today.getFullYear();
+if(dd<10){
+    dd='0'+dd
+}
+if(mm<10){
+    mm='0'+mm
+}
 
-    var firstName = author.split(' ').slice(0, -1).join(' ');
-    var lastName = author.split(' ').slice(-1).join(' ');
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("dateInput").setAttribute("max", today);
+
+
+
+function generateBookReference() {
+    let author = document.forms["apaFormBook"]["authorInput"].value;
+    let title = document.forms["apaFormBook"]["titleInput"].value;
+    let city = document.forms["apaFormBook"]["cityInput"].value;
+    let year = document.forms["apaFormBook"]["yearInput"].value;
+    let page = document.forms["apaFormBook"]["pageInput"].value;
+
+    let firstName = author.split(' ').slice(0, -1).join(' ');
+    let lastName = author.split(' ').slice(-1).join(' ');
 
     document.getElementById("outputReference").innerHTML = lastName + " " + firstName.charAt(0) + ". " + "(" + year + ") " +"<i>"+title+"</i>";
 
@@ -15,15 +31,16 @@ function generateBookReference() {
 
 
 function generateWebReference() {
-    var author = document.forms["apaFormWeb"]["authorInput"].value;
-    var title = document.forms["apaFormWeb"]["titleInput"].value;
-    var date = new Date(document.forms["apaFormWeb"]["dateInput"].value);
-    var url = document.forms["apaFormWeb"]["urlInput"].value;
+    let author = document.forms["apaFormWeb"]["authorInput"].value;
+    let title = document.forms["apaFormWeb"]["titleInput"].value;
+    let date = new Date(document.forms["apaFormWeb"]["dateInput"].value);
+    let url = document.forms["apaFormWeb"]["urlInput"].value;
+    let type = document.forms["apaFormWeb"]["typeInput"].value;
 
-    var firstName = author.split(' ').slice(0, -1).join(' ');
-    var lastName = author.split(' ').slice(-1).join(' ');
+    let firstName = author.split(' ').slice(0, -1).join(' ');
+    let lastName = author.split(' ').slice(-1).join(' ');
 
-    document.getElementById("outputReference").innerHTML = lastName + ", " + firstName.charAt(0) + ". " + "(" + dateConversor(date) + ") " +title + " [¿Que es?] Recuperado de " + url;
+    document.getElementById("outputReference").innerHTML = lastName + ", " + firstName.charAt(0) + ". " + "(" + dateConversor(date) + ") " +title + " ["+ type +"] Recuperado de " + url;
 }
 
 function dateConversor(date){

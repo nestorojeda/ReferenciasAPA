@@ -37,22 +37,34 @@
 
 <form name ="apaFormWeb">
     <div class="col-sm-6 offset-sm-3 text-center">
-    <div class="form-group">
+        <div class="form-group">
         <label>Autor(es)</label>
-        <input type="text" class="form-control" name="authorInput" aria-describedby="authorHelp" placeholder="Introduzca el nombre del autor / autores">
-    </div>
-    <div class="form-group">
-        <label>Titulo</label>
-        <input type="text" class="form-control" name="titleInput" placeholder="Inserte el título">
-    </div>
-    <div class="form-group">
-        <label>Fecha</label>
-        <input type="date" class="form-control" name="dateInput" placeholder="Inserte la fecha">
-    </div>
-    <div class="form-group">
-        <label>URL</label>
-        <input type="url" class="form-control" name="urlInput" placeholder="Inserte la url de la página">
-    </div>
+            <input type="text" class="form-control" name="authorInput" aria-describedby="authorHelp" placeholder="Introduzca el nombre del autor / autores">
+        </div>
+        <div class="form-group">
+            <label>Titulo</label>
+            <input type="text" class="form-control" name="titleInput" placeholder="Inserte el título">
+        </div>
+        <div class="form-group">
+            <label>Fecha</label>
+            <input type="date" class="form-control" id="dateInput" name="dateInput" placeholder="Inserte la fecha">
+        </div>
+        <div class="form-group">
+            <label>URL</label>
+            <input type="url" class="form-control" name="urlInput" placeholder="Inserte la url de la página">
+        </div>
+
+        <div class="form-group">
+            <label>Tipo de publicación:</label>
+            <br>
+            <div class="form-check-inline">
+                <input type="radio" name="typeInput" value="Imagen" checked> Imagen<br>
+            </div>
+            <div class="form-check-inline">
+                <input type="radio" name="typeInput" value="Publicación en un blog"> Publicación en un blog<br>
+            </div>
+        </div>
+
     <button type="button" onclick="generateWebReference()" class="btn btn-primary">Generar referencia</button>
     </div>
 </form>
