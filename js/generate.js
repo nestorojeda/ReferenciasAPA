@@ -34,22 +34,22 @@ function generateWebReference() {
 }
 
 function dateConversor(date){
-    let day = date.getDay();
+    let day = date.getDate();
     let month = date.getMonth();
     let year = date.getFullYear();
 
-    if(month === 1) month = "enero";
-    if(month === 2) month = "febrero";
-    if(month === 3) month = "marzo";
-    if(month === 4) month = "abril";
-    if(month === 5) month = "mayo";
-    if(month === 6) month = "junio";
-    if(month === 7) month = "julio";
-    if(month === 8) month = "agosto";
-    if(month === 9) month = "septiembre";
-    if(month === 10) month = "octubre";
-    if(month === 11) month = "noviembre";
-    if(month === 12) month = "diciembre";
+    if(month === 0) month = "enero";
+    if(month === 1) month = "febrero";
+    if(month === 2) month = "marzo";
+    if(month === 3) month = "abril";
+    if(month === 4) month = "mayo";
+    if(month === 5) month = "junio";
+    if(month === 6) month = "julio";
+    if(month === 7) month = "agosto";
+    if(month === 8) month = "septiembre";
+    if(month === 9) month = "octubre";
+    if(month === 10) month = "noviembre";
+    if(month === 11) month = "diciembre";
 
     return day + " de " +  month + " de " + year;
 
